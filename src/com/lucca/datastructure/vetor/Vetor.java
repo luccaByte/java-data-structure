@@ -52,6 +52,16 @@ public class Vetor {
         return this.elementos[posicao];
     }
 
+    // busca sequencial
+    public int busca(String elemento) {
+        for(int i=0; i < this.tamanho; i++){
+            // Quando for string, comparar utilizando .equals e nao ==
+            if (this.elementos[i].equals(elemento)) {
+                return i;
+            }
+        }
+        return -1; // posiçao que nao existe no vetor
+    }
 
     public int tamanho() {
         return this.tamanho;
