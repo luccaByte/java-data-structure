@@ -22,9 +22,7 @@ public class Vetor {
 
     // opção 2 - melhorando o método adiciona
     // public void adiciona(String elemento) throws Exception {
-
-    //     if (this.tamanho < this.elementos.length) {
-            
+    //     if (this.tamanho < this.elementos.length) {        
     //         this.elementos[this.tamanho] = elemento;
     //         this.tamanho++;
     //     } else {
@@ -97,6 +95,23 @@ public class Vetor {
             }
         }
         return -1; // posiçao que nao existe no vetor
+    }
+
+    // B D E F F -> posicao a ser removida é 1 (G)
+    // 0 1 2 3 4 -> tamanho é 5
+    // vetor[1] = vetor[2]
+    // vetor[2] = vetor[3]
+    // vetor[3] = vetor[4]
+    public void remove(int posicao) {
+        if (!(posicao >= 0 && posicao < tamanho)) {
+            throw new IllegalArgumentException("Posição inválida.");
+        }
+
+        for (int i=posicao;i<this.tamanho-1; i++) {
+            this.elementos[i] = this.elementos[i+1];
+        }
+
+        this.tamanho--;
     }
 
     public int tamanho() {
