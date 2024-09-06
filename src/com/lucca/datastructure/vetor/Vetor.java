@@ -35,6 +35,8 @@ public class Vetor {
     //opçao 3
     public boolean adiciona(String elemento) {
 
+        this.aumentaCapacidade();
+
         if (this.tamanho < this.elementos.length) {
             
             this.elementos[this.tamanho] = elemento;
@@ -53,6 +55,8 @@ public class Vetor {
             throw new IllegalArgumentException("Posição inválida.");
         }
 
+        this.aumentaCapacidade();
+
         // mover todos os elementos
         for (int i = this.tamanho-1; i >= posicao; i--) {
             this.elementos[i+1] = this.elementos[i];
@@ -62,6 +66,19 @@ public class Vetor {
         this.tamanho++;
 
         return true;
+    }
+
+    // aumentar capacidade do vetor
+    private void aumentaCapacidade() {
+        if (this.tamanho == this.elementos.length) {
+            String[] elementosNovos = new String[this.elementos.length * 2]; // a melhor forma de aumentar a capacidade é dobrando o vetor
+
+            for (int i=0; i<this.elementos.length; i++) {
+                elementosNovos[i] = this.elementos[i];
+            }
+
+            this.elementos = elementosNovos;
+        }
     }
 
     public String busca(int posicao) {
