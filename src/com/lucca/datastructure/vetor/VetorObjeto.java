@@ -46,7 +46,7 @@ public class VetorObjeto {
     // aumentar capacidade do vetor
     private void aumentaCapacidade() {
         if (this.tamanho == this.elementos.length) {
-            Object[] elementosNovos = new String[this.elementos.length * 2]; // a melhor forma de aumentar a capacidade é dobrando o vetor
+            Object[] elementosNovos = new Object[this.elementos.length * 2]; // a melhor forma de aumentar a capacidade é dobrando o vetor
 
             for (int i=0; i<this.elementos.length; i++) {
                 elementosNovos[i] = this.elementos[i];
