@@ -1,4 +1,4 @@
-package com.lucca.datastructure.tests;
+package com.lucca.datastructure.vetor.tests;
 
 import java.util.ArrayList;
 
