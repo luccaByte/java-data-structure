@@ -83,6 +83,17 @@ public class Lista<T> {
         return -1; // posiçao que nao existe no vetor
     }
 
+    public boolean contem(T elemento) {
+        // int pos = busca(elemento);
+        // if (pos > 1) {
+        //     return true;
+        // }
+        // return false;
+
+        // opçao melhor
+        return busca(elemento) > -1; // >= 0
+    }
+
     public void remove(int posicao) {
         if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição inválida.");
