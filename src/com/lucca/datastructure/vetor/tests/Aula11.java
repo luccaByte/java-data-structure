@@ -8,7 +8,7 @@ public class Aula11 {
 
         Lista<Integer> vetor = new Lista(1);
 
-        vetor.adiciona("elemento");
+        // vetor.adiciona("elemento");
         vetor.adiciona(1);
     }
 }
