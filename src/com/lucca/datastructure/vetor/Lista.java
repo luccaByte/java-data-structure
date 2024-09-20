@@ -128,6 +128,21 @@ public class Lista<T> {
         }
     }
 
+    public void limpar() {
+
+        // opçao 1
+        // this.elementos = (T[])new Object[this.elementos.length];
+
+        // opçao 2
+        // this.tamanho = 0;
+
+        // opçao 3: dependendo do tamanho do vetor, pode ser a melhor opçao
+        for (int i=0; i < this.tamanho; i++) {
+            this.elementos[i] = null;
+        }
+        this.tamanho = 0;
+    }
+
     public int tamanho() {
         return this.tamanho;
     }
