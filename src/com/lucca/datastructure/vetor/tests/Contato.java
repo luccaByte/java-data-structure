@@ -12,6 +12,11 @@ public class Contato {
         this.telefone = telefone;
         this.email = email;
     }
+
+    public Contato() {
+
+    }
+
     public String getNome() {
         return nome;
     }
