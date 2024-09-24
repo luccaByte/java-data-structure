@@ -206,14 +206,14 @@ public class Ex06 {
         System.out.println(lista);
     }
 
-    protected static String lerInformacao(String msg, Scanner sc) {
+    private static String lerInformacao(String msg, Scanner sc) {
         System.out.println(msg);
         String entrada = sc.nextLine();
 
         return entrada;
     }
 
-    protected static int lerInformacaoInt(String msg, Scanner sc) {
+    private static int lerInformacaoInt(String msg, Scanner sc) {
         boolean entradaValida = false;
         int num = 0;
 
@@ -235,7 +235,7 @@ public class Ex06 {
         return num;
     }
 
-    protected static int obterOpcaoMenu(Scanner sc) {
+    private static int obterOpcaoMenu(Scanner sc) {
         boolean entradaValida = false;
         String entrada;
         int opcao  = 0;
@@ -277,7 +277,7 @@ public class Ex06 {
         return opcao;
     }
 
-    protected static void criarContatosDinamicamente(int quantidade, Lista<Contato> lista) {
+    private static void criarContatosDinamicamente(int quantidade, Lista<Contato> lista) {
 
         Contato contato;
 

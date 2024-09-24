@@ -2,11 +2,13 @@ package com.lucca.datastructure.vetor.labs;
 
 import com.lucca.datastructure.vetor.Lista;
 
+import java.util.ArrayList;
+
 public class Ex05 {
     public static void main(String[] args) {
 
         // com o metodo já existente da classe Arraylist
-        java.util.ArrayList<String> arrayList = new java.util.ArrayList<>(5);
+        ArrayList<String> arrayList = new ArrayList<>(5);
 
         arrayList.add("A");
         arrayList.add("B");
