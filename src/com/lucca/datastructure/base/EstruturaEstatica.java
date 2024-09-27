@@ -1,8 +1,8 @@
 package com.lucca.datastructure.base;
 
 public class EstruturaEstatica<T> {
-    private T[] elementos;
-    private int tamanho;
+    protected T[] elementos;
+    protected int tamanho;
 
     // melhor opçao
     public EstruturaEstatica(int capacidade){
@@ -46,6 +46,18 @@ public class EstruturaEstatica<T> {
         this.tamanho++;
 
         return true;
+    }
+
+    public void remove(int posicao) {
+        if (!(posicao >= 0 && posicao < tamanho)) {
+            throw new IllegalArgumentException("Posição inválida.");
+        }
+
+        for (int i=posicao;i<this.tamanho-1; i++) {
+            this.elementos[i] = this.elementos[i+1];
+        }
+
+        this.tamanho--;
     }
 
     // aumentar capacidade do vetor
